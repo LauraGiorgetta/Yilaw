@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+//-----------------Funciones---------------------
+@mixin property-prefix($name, $value) {
+  @each $property in ("-webkit-", "-moz-", "-ms-", "-o-", "") {
+    #{$name}: #{$property}#{$value};
+  }
+}
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+//------------------Variables--------------------
+
+//$bg-header-gradient: linear-gradient(25deg, #000040, #000e7a);
+$bg-header: #d3f1ff;
+$bg: #f6fdff;
+$h-box-shadow: 0 0 5px 2px #d3f1ff;
+
+//--------------------CSS----------------------
+
+* {
+  @include vendor-prefix('box-sizing', 'border-box');
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $bg;
+}
+header {
+  //@include property-prefix("background", $bg-header);
+  background-color: $bg-header;
+  padding: 1rem;
+  @include vendor-prefix('box-shadow', $h-box-shadow );
+  //--------revisar-------------
+  position: relative;
+  width: 100%;
+  z-index: -3;
+  //----------------------------
+}
+header ul {
+
+}
+.logo {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Expletus Sans', cursive;
+  color: #000076;
+  text-decoration: none;
+}
