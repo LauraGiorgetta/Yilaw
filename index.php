@@ -10,14 +10,8 @@
 <body>
     <?php
         include 'nav.php';
-
     ?>
     <main>
-        <nav>
-            <ul>
-                <li><a href="#">Estructura básica</a></li>
-            </ul>
-        </nav>
 
     </main>
 </body>
